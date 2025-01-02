@@ -1,0 +1,3 @@
+usr/lib/${DEB_HOST_MULTIARCH}/libjwt.la
+usr/share/doc/*/LICENSE
+usr/share/doc/*/README.md

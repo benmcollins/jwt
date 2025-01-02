@@ -1,0 +1,6 @@
+usr/lib/${DEB_HOST_MULTIARCH}/libjwt.so
+usr/lib/${DEB_HOST_MULTIARCH}/libjwt.a
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/libjwt.pc
+usr/lib/${DEB_HOST_MULTIARCH}/cmake/LibJWT/LibJWTConfig*.cmake
+usr/include/jwt.h
+usr/include/jwt_export.h

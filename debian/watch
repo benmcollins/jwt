@@ -1,0 +1,7 @@
+version=4
+
+# https://github.com/benmcollins/libjwt
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%libjwt-$1.tar.gz%,dversionmangle=s/\+dfsg\d*$//" \
+   https://github.com/benmcollins/libjwt/tags \
+   (?:.*?/)?v?(\d[\d.]*)\.tar\.gz debian uupdate
+

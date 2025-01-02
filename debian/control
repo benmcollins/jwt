@@ -1,0 +1,80 @@
+Source: libjwt14
+Section: devel
+Priority: optional
+Maintainer: Debian IoT Maintainers <debian-iot-maintainers@lists.alioth.debian.org>
+Uploaders: Thorsten Alteholz <debian@alteholz.de>
+Build-Depends: debhelper-compat (= 13)
+	, pkgconf
+	, libjansson-dev
+	, libssl-dev
+	, check
+	, gnutls-dev
+	, quilt
+	, valgrind
+	, cmake
+Build-Depends-Indep: doxygen, graphviz
+Standards-Version: 4.7.0
+Homepage: https://github.com/benmcollins/libjwt
+Vcs-Git: https://github.com/benmcollins/libjwt
+Vcs-Browser: https://github.com/benmcollins/libjwt.git
+Rules-Requires-Root: no
+
+Package: libjwt14
+Section: libs
+Multi-Arch: same
+Architecture: any
+Suggests: jwt-tools
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: C JSON Web Token Library +JWK +JWKS
+ libjwt is a library which allows you to encode and decode
+ JSON Web Tokens (JWT).
+ .
+ JSON Web Tokens are an open, industry standard RFC 7519 method for
+ representing claims securely between two parties.
+
+Package: libjwt14-dev
+Architecture: any
+Multi-Arch: same
+Section: libdevel
+Suggests: libjwt14-doc
+Depends: libjwt14 (= ${binary:Version})
+        , ${misc:Depends}
+Description: C JSON Web Token Library +JWK +JWKS - development
+ libjwt is a library which allows you to encode and decode
+ JSON Web Tokens (JWT).
+ .
+ JSON Web Tokens are an open, industry standard RFC 7519 method for
+ representing claims securely between two parties.
+ .
+ This package contains the development files.
+
+Package: jwt-tools
+Architecture: any
+Section: admin
+Depends: libjwt14 (= ${binary:Version}), ${shlibs:Depends},
+        , ${misc:Depends}
+Description: Command line tools for JWT, JWK, and JWKS
+ libjwt is a library which allows you to encode and decode
+ JSON Web Tokens (JWT).
+ .
+ JSON Web Tokens are an open, industry standard RFC 7519 method for
+ representing claims securely between two parties.
+ .
+ This package contains tools to create and verify JWT tokens, as well as
+ Convert keys between DER/PEM and JWK (JSON Web Key). It can also handle
+ JWKS (JSON Web Key Set).
+
+Package: libjwt14-doc
+Architecture: all
+Section: doc
+Depends: libjwt14-dev (>= ${source:Version}),
+	libjwt14-dev (<< ${source:Version}.1~),
+	${misc:Depends}
+Description: C JSON Web Token Library +JWK +JWKS - documentation
+ libjwt is a library which allows you to encode and decode
+ JSON Web Tokens (JWT).
+ .
+ JSON Web Tokens are an open, industry standard RFC 7519 method for
+ representing claims securely between two parties.
+ .
+ This package contains documentation in HTML format.

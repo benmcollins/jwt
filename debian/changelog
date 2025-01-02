@@ -1,0 +1,5 @@
+libjwt14 (3.2.0-1) unstable; urgency=medium
+
+  * First build of v3.2.0 (SOVERSION 14)
+
+ -- Ben Collins <bcollins@ubuntu.com>  Thu, 02 Jan 2025 03:11:14 +0000

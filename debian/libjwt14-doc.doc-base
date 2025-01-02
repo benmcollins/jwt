@@ -1,0 +1,9 @@
+Document: libjwt
+Title: LibJWT API Documentation
+Author: Ben Collins
+Abstract: Documents the programatic API for LibJWT to handle JSON Web Tokens
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/libjwt14/html/index.html
+Files: /usr/share/doc/libjwt14/html/*.html

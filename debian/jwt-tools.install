@@ -1,0 +1,4 @@
+usr/bin/jwk2key
+usr/bin/key2jwk
+usr/bin/jwt-generate
+usr/bin/jwt-verify
